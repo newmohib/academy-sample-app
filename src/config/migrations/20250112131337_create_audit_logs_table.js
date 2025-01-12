@@ -17,11 +17,13 @@ exports.up = function(knex) {
     });
   };
   
+  exports.down = function(knex) {
+    return knex.schema.dropTableIfExists('audit_logs');
+  };
+  
+
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 
-  exports.down = function(knex) {
-    return knex.schema.dropTableIfExists('audit_logs');  
-  };  
