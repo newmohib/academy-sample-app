@@ -1,7 +1,8 @@
 const express = require('express');
 const { body, param, query } = require('express-validator');
 const StudentController = require('../controllers/studentController');
-const authenticateJWT = require('../middlewares/authMiddleware');
+// const {getPaginatedStudents} = require('../controllers/studentController');
+const {authenticateJWT} = require('../middlewares/authenticateJWT');
 
 const router = express.Router();
 
@@ -22,6 +23,7 @@ router.get(
   authenticateJWT,
   [param('id').isInt().withMessage('Student ID must be an integer')],
   StudentController.getStudentById
+  
 );
 
 // Create a new student

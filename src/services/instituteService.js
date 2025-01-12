@@ -1,4 +1,4 @@
-const Institute = require('../models/instituteModel');
+const Institute = require('../models/Institute');
 
 /**
  * Get all institutes

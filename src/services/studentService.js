@@ -1,4 +1,4 @@
-const Student = require('../models/studentModel');
+const Student = require('../models/Student');
 
 class StudentService {
   static async createStudent(data) {

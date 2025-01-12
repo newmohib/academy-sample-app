@@ -1,6 +1,6 @@
-const Result = require('../models/resultModel');
-const Student = require('../models/studentModel');
-const Course = require('../models/courseModel');
+const Result = require('../models/Result');
+const Student = require('../models/Student');
+const Course = require('../models/Course');
 
 class ResultService {
   static async createResult(data) {

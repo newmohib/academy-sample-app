@@ -1,3 +1,6 @@
+const bcrypt = require('bcrypt');
+
+
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
@@ -59,14 +62,14 @@ exports.seed = async function(knex) {
     { id: 4, student_id: 4, course_id: 4, status: 'enrolled' },
     { id: 5, student_id: 5, course_id: 5, status: 'enrolled' },
   ]);
-
+  const hashedPassword = await bcrypt.hash("12345", 10);
   // Insert seed data for users
   await knex('users').insert([
-    { id: 1, email: 'admin@example.com', password: 'hashedpassword', role: 'admin' },
-    { id: 2, email: 'student1@example.com', password: 'hashedpassword', role: 'user' },
-    { id: 3, email: 'student2@example.com', password: 'hashedpassword', role: 'user' },
-    { id: 4, email: 'teacher@example.com', password: 'hashedpassword', role: 'user' },
-    { id: 5, email: 'support@example.com', password: 'hashedpassword', role: 'user' },
+    { id: 1, email: 'admin@example.com', password: hashedPassword, role: 'admin' },
+    { id: 2, email: 'student1@example.com', password: hashedPassword, role: 'user' },
+    { id: 3, email: 'student2@example.com', password: hashedPassword, role: 'user' },
+    { id: 4, email: 'teacher@example.com', password: hashedPassword, role: 'user' },
+    { id: 5, email: 'support@example.com', password: hashedPassword, role: 'user' },
   ]);
 
   // Insert seed data for user_roles

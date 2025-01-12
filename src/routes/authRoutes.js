@@ -6,12 +6,12 @@ const handleValidationErrors = require('../middlewares/handleValidationErrors');
 const router = express.Router();
 
 router.post('/signup', [
-  body('username').isString().notEmpty().withMessage('Username is required'),
+  body('email').isString().notEmpty().withMessage('email is required'),
   body('password').isString().notEmpty().withMessage('Password is required')
 ], handleValidationErrors, signup);
 
 router.post('/signin', [
-  body('username').isString().notEmpty().withMessage('Username is required'),
+  body('email').isString().notEmpty().withMessage('email is required'),
   body('password').isString().notEmpty().withMessage('Password is required')
 ], handleValidationErrors, signin);
 
