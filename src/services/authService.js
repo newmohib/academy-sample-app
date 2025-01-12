@@ -44,13 +44,13 @@ const loginUser = async (email, password) => {
     console.log("Login User Service",{ user });
     
     if (!user) {
-      throw new Error('User not found');
+      throw new Error('Invalid User/password');
     }
 
     // Compare password with stored hashed password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      throw new Error('Invalid password');
+      throw new Error('Invalid User/password');
     }
 
     // Generate JWT token
