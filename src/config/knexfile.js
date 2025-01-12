@@ -88,7 +88,7 @@ module.exports = {
       tableName: "knex_migrations",
     },
     seeds: {
-      directory: "./seeds",
+      directory: "../seeds",
     },
     ...knexSnakeCaseMappers,
   },
