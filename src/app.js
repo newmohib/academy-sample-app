@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use('/auth', authRoutes);
 
 // Middleware to protect routes
-// app.use(authenticateJWT);
+app.use(authenticateJWT);
 
 // Protected routes for only authenticated users with admin role
 app.use('/institutes', instituteRoutes);
@@ -31,7 +31,7 @@ app.use('/students', studentRoutes);
 app.use('/courses', courseRoutes);
 // role check for admin access only
 
-// app.use(checkRole('admin'));
+app.use(checkRole('admin'));
 app.use('/results', resultRoutes);
 
 // Routes for reports
