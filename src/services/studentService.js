@@ -1,7 +1,9 @@
 const Student = require('../models/Student');
 
 class StudentService {
+  
   static async createStudent(data) {
+    console.log({ data });
     return await Student.query().insert(data);
   }
 

@@ -58,39 +58,40 @@ class StudentController {
 
     // Fetch paginated students
 
-    try {
-      const { limit = 10, cursor, direction } = req.query; // Default limit to 10
+
+    // try {
+    //   const { limit = 10, cursor, direction } = req.query; // Default limit to 10
     
-      const query = Student.query().orderBy('id', direction === 'prev' ? 'desc' : 'asc').limit(parseInt(limit));
+    //   const query = Student.query().orderBy('id', direction === 'prev' ? 'desc' : 'asc').limit(parseInt(limit));
     
-      // Add cursor condition
-      if (cursor) {
-        if (direction === 'prev') {
-          query.where('id', '<', cursor); // Fetch previous records
-        } else {
-          query.where('id', '>', cursor); // Fetch next records
-        }
-      }
+    //   // Add cursor condition
+    //   if (cursor) {
+    //     if (direction === 'prev') {
+    //       query.where('id', '<', cursor); // Fetch previous records
+    //     } else {
+    //       query.where('id', '>', cursor); // Fetch next records
+    //     }
+    //   }
     
-      const students = await query;
+    //   const students = await query;
     
-      // Adjust next and previous cursors based on the current query
-      const nextCursor = students.length > 0 ? students[students.length - 1].id : null;
-      const prevCursor = students.length > 0 ? students[0].id : null;
+    //   // Adjust next and previous cursors based on the current query
+    //   const nextCursor = students.length > 0 ? students[students.length - 1].id : null;
+    //   const prevCursor = students.length > 0 ? students[0].id : null;
     
-      res.status(200).json({
-        data: students,
-        meta: {
-          nextCursor, // Send the next cursor for next page
-          prevCursor, // Send the previous cursor for previous page (optional)
-          hasNextPage: students.length === parseInt(limit),
-          hasPrevPage: !!cursor, // If a cursor exists, a previous page might exist
-        },
-      });
-    } catch (error) {
-      console.error('Error fetching paginated students:', error);
-      res.status(500).json({ message: 'Error fetching students', error });
-    }
+    //   res.status(200).json({
+    //     data: students,
+    //     meta: {
+    //       nextCursor, // Send the next cursor for next page
+    //       prevCursor, // Send the previous cursor for previous page (optional)
+    //       hasNextPage: students.length === parseInt(limit),
+    //       hasPrevPage: !!cursor, // If a cursor exists, a previous page might exist
+    //     },
+    //   });
+    // } catch (error) {
+    //   console.error('Error fetching paginated students:', error);
+    //   res.status(500).json({ message: 'Error fetching students', error });
+    // }
 
     // Fetch paginated students with cursor
 
@@ -144,6 +145,8 @@ class StudentController {
     }
   }
   static async createStudent(req, res) {
+    console.log("Create Student 1");
+    
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
@@ -151,6 +154,7 @@ class StudentController {
 
     try {
       const student = await StudentService.createStudent(req.body);
+      console.log("Create Student 2");
       res.status(201).json(student);
     } catch (err) {
       res.status(400).json({ error: err.message });

@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use('/auth', authRoutes);
 
 // Middleware to protect routes
-app.use(authenticateJWT);
+// app.use(authenticateJWT);
 
 // Protected routes for only authenticated users with admin role
 app.use('/institutes', instituteRoutes);

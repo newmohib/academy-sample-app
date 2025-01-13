@@ -23,15 +23,21 @@ const getInstituteById = async (req, res) => {
     res.status(500).json({ message: 'Error fetching institute', error });
   }
 };
+// "name": "Institute A", 
+//     "address": "123 Main St",
+//     "contact": "123-456-7890",
+//     "email": "contact@instituteA.com",
+//     "contactNumber":"01722186199"
 
 // Create a new institute
 const createInstitute = async (req, res) => {
-  const { name, address, contactNumber } = req.body;
+  const { name, address, contact, email, } = req.body;
   try {
     const newInstitute = await instituteService.createInstitute({
       name,
       address,
-      contactNumber,
+      contact,
+      email
     });
     res.status(201).json(newInstitute);
   } catch (error) {

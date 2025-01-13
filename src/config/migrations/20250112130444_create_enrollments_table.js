@@ -5,7 +5,8 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('enrollments', (table) => {
-      table.increments('id').primary(); // auto incrementing primary key
+      //table.increments('id').primary(); // auto incrementing primary key
+      table.increments('id', amount = 1).primary(); // auto incrementing primary key
       table.integer('student_id').unsigned().notNullable();
       table.integer('course_id').unsigned().notNullable();
       table.string('status').defaultTo('enrolled'); // active, dropped, etc.

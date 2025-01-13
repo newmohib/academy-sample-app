@@ -12,11 +12,11 @@ class Student extends Model {
   static get jsonSchema() {
     return {
       type: 'object',
-      required: ['name', 'age', 'institute_id'],
+      required: ['name', 'institute_id'],
       properties: {
         id: { type: 'integer' },
         name: { type: 'string', minLength: 1, maxLength: 255 },
-        age: { type: 'integer', minimum: 18, maximum: 100 },
+       // age: { type: 'integer', minimum: 18, maximum: 100 },
         institute_id: { type: 'integer' },
       },
     };

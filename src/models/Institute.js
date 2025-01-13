@@ -12,13 +12,13 @@ class Institute extends Model {
   static get jsonSchema() {
     return {
       type: 'object',
-      required: ['name', 'address', 'contactNumber'],
+      required: ['name', 'address','contact' ],
 
       properties: {
         id: { type: 'integer' },
         name: { type: 'string', minLength: 1, maxLength: 255 },
         address: { type: 'string', minLength: 1, maxLength: 500 },
-        contactNumber: { type: 'string', minLength: 1, maxLength: 15 },
+        contact: { type: 'string', minLength: 1, maxLength: 15 },
       },
     };
   }
