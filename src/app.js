@@ -8,6 +8,7 @@ const instituteRoutes = require('./routes/instituteRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const courseRoutes = require('./routes/courseRoutes');
 const resultRoutes = require('./routes/resultRoutes');
+const reportRoutes = require('./routes/reportRoutes');
 const {authenticateJWT, checkRole} = require('./middlewares/authenticateJWT');
 
 const app = express();
@@ -32,5 +33,8 @@ app.use('/courses', courseRoutes);
 
 // app.use(checkRole('admin'));
 app.use('/results', resultRoutes);
+
+// Routes for reports
+app.use('/reports', reportRoutes);
 
 module.exports = app;

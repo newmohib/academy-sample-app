@@ -12,12 +12,12 @@ class Course extends Model {
   static get jsonSchema() {
     return {
       type: 'object',
-      required: ['name', 'description', 'duration'],
+      required: ['name', 'description', ],
       properties: {
         id: { type: 'integer' },
             name: { type: 'string', minLength: 1, maxLength: 255 },
             description: { type: 'string', minLength: 1, maxLength: 1000 },
-            duration: { type: 'integer', minimum: 1 }, // Duration in hours
+           // duration: { type: 'integer', minimum: 1 }, // Duration in hours
           },
         };
       }

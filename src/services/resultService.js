@@ -4,7 +4,10 @@ const Course = require('../models/Course');
 
 class ResultService {
   static async createResult(data) {
-    const { student_id, course_id, marks_obtained } = data;
+    let { student_id, course_id, marks_obtained, year } = data;
+    if (!year) {
+      year = new Date().getFullYear();
+    }
 
     // Ensure student and course exist
     const student = await Student.query().findById(student_id);
@@ -22,6 +25,7 @@ class ResultService {
       student_id,
       course_id,
       marks_obtained,
+      year
     });
   }
 

@@ -15,10 +15,11 @@ const getAllCourses = async (req, res) => {
 /**
  * Create a new course
  */
+
 const createCourse = async (req, res) => {
   try {
-    const { name, description, duration } = req.body;
-    const newCourse = await CourseService.createCourse({ name, description, duration });
+    const { name, description, institute_id } = req.body;
+    const newCourse = await CourseService.createCourse({ name, description, institute_id });
     res.status(201).json(newCourse);
   } catch (error) {
     res.status(500).json({ error: error.message });

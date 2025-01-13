@@ -106,3 +106,16 @@ exports.seed = async function(knex) {
     { id: 5, user_id: 5, action: 'logged out', details: 'User logged out successfully.', action_time: knex.fn.now() },
   ]);
 };
+
+
+
+// Queries: – Implement queries for retrieving institutes, students, courses, results
+// – Implement a query to retrieve results of all students per institute
+// – Implement a query to retrieve top courses taken by users per year
+// – Implement a query to retrieve top ranking students by highest results. 
+
+
+// Mutations: – Implement mutations to add institutes, students, courses, results.
+// – Implement mutations to update institutes, students, courses, results.
+// – Implement mutations to delete institutes, students, courses, results.
+
