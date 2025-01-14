@@ -47,11 +47,11 @@ exports.seed = async function(knex) {
 
   // Insert seed data for results
   await knex('results').insert([
-    { id: 1, student_id: 1, course_id: 1, marks_obtained: 85 },
-    { id: 2, student_id: 2, course_id: 2, marks_obtained: 90 },
-    { id: 3, student_id: 3, course_id: 3, marks_obtained: 80 },
-    { id: 4, student_id: 4, course_id: 4, marks_obtained: 88 },
-    { id: 5, student_id: 5, course_id: 5, marks_obtained: 95 },
+    { id: 1, student_id: 1, course_id: 1, marks_obtained: 85,year:2024 },
+    { id: 2, student_id: 2, course_id: 2, marks_obtained: 90,year:2024  },
+    { id: 3, student_id: 3, course_id: 3, marks_obtained: 80,year:2025  },
+    { id: 4, student_id: 4, course_id: 4, marks_obtained: 88,year:2024  },
+    { id: 5, student_id: 5, course_id: 5, marks_obtained: 95,year:2025  },
   ]);
 
   // Insert seed data for enrollments
@@ -63,6 +63,8 @@ exports.seed = async function(knex) {
     { id: 5, student_id: 5, course_id: 5, status: 'enrolled' },
   ]);
   const hashedPassword = await bcrypt.hash("12345", 10);
+  console.log({ hashedPassword });
+  
   // Insert seed data for users
   await knex('users').insert([
     { id: 1, email: 'admin@example.com', password: hashedPassword, role: 'admin' },

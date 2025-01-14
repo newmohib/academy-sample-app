@@ -6,6 +6,7 @@
     "start": "node ./server.js",
     "dev": "nodemon ./server.js",
     "seed": "npx knex seed:run --knexfile ./src/config/knexfile.js",
+    "seed:specific": "npx knex seed:run --knexfile ./src/config/knexfile.js --specific seed_0.1_million.js",
     "migrate": "npx knex migrate:latest --knexfile ./src/config/knexfile.js",
     "migrate:rollback": "npx knex migrate:rollback --knexfile ./src/config/knexfile.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +16,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",

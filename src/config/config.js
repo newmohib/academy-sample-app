@@ -1,3 +1,4 @@
+require('dotenv').config({path:'../../.env'})
 module.exports = {
     NODE_ENV: process.env.NODE_ENV || 'development',
     JWT_SECRET: process.env.JWT_SECRET || 'your-secret-key', // Replace with an actual secret

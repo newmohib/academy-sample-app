@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const knex = require('./config/db');
 const { Model } = require('objection');
 
+
+
+
 const authRoutes = require('./routes/authRoutes');
 const instituteRoutes = require('./routes/instituteRoutes');
 const studentRoutes = require('./routes/studentRoutes');

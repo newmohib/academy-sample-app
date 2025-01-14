@@ -73,6 +73,9 @@ const config = require("./config");
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+console.log({ config });
+
 module.exports = {
   development: {
     client: "postgresql",

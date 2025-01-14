@@ -11,6 +11,10 @@
  - npm i 
 - migration database with run script
  - npm run migrate
+ - run sampel seed
+  - npm run seed
+ - run sample 0.1 millions seed 
+  - npm run seed:specific 
  - npm run dev (development/local)
  - npm run start (production)
 - roleback 
