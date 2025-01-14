@@ -47,6 +47,25 @@
 		},
 		{
 			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -70,12 +89,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/auth/signin",
-					"protocol": "http",
+					"raw": "{{url}}/auth/signin",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"auth",
 						"signin"
@@ -95,7 +112,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -112,12 +129,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/institutes",
-					"protocol": "http",
+					"raw": "{{url}}/institutes",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"institutes"
 					]
@@ -133,7 +148,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -150,12 +165,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/institutes",
-					"protocol": "http",
+					"raw": "{{url}}/institutes",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"institutes"
 					]
@@ -171,7 +184,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -188,12 +201,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/institutes/1",
-					"protocol": "http",
+					"raw": "{{url}}/institutes/1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"institutes",
 						"1"
@@ -210,7 +221,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -227,12 +238,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/institutes/2",
-					"protocol": "http",
+					"raw": "{{url}}/institutes/2",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"institutes",
 						"2"
@@ -252,7 +261,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc2NzY5NCwiZXhwIjoxNzM2NzcxMjk0fQ.j3gxr7bHjcwsPIbA2_0-LL_iQqwu43GTHQabGZSUMuE",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -269,12 +278,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/students?limit=2&direction=next&cursor=Mw==",
-					"protocol": "http",
+					"raw": "{{url}}/students?limit=2&direction=next&cursor=Mw==",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"students"
 					],
@@ -314,7 +321,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -331,12 +338,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/students",
-					"protocol": "http",
+					"raw": "{{url}}/students",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"students"
 					],
@@ -379,7 +384,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -396,12 +401,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/students/1",
-					"protocol": "http",
+					"raw": "{{url}}/students/1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"students",
 						"1"
@@ -445,7 +448,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -462,12 +465,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/students/1",
-					"protocol": "http",
+					"raw": "{{url}}/students/1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"students",
 						"1"
@@ -511,7 +512,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -528,12 +529,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/courses",
-					"protocol": "http",
+					"raw": "{{url}}/courses",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"courses"
 					],
@@ -576,7 +575,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -593,12 +592,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/courses/1",
-					"protocol": "http",
+					"raw": "{{url}}/courses/1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"courses",
 						"1"
@@ -645,7 +642,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -662,12 +659,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/courses",
-					"protocol": "http",
+					"raw": "{{url}}/courses",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"courses"
 					],
@@ -710,7 +705,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -727,12 +722,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/results",
-					"protocol": "http",
+					"raw": "{{url}}/results",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"results"
 					],
@@ -775,7 +768,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -792,12 +785,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/results/1",
-					"protocol": "http",
+					"raw": "{{url}}/results/1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"results",
 						"1"
@@ -844,7 +835,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -861,12 +852,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/results",
-					"protocol": "http",
+					"raw": "{{url}}/results",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"results"
 					],
@@ -912,7 +901,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -929,12 +918,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/reports/results/institute/1",
-					"protocol": "http",
+					"raw": "{{url}}/reports/results/institute/1",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"reports",
 						"results",
@@ -983,7 +970,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -1000,12 +987,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/reports/courses/top?year=2025",
-					"protocol": "http",
+					"raw": "{{url}}/reports/courses/top?year=2025",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"reports",
 						"courses",
@@ -1057,7 +1042,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -1074,12 +1059,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/reports/students/top",
-					"protocol": "http",
+					"raw": "{{url}}/reports/students/top",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"reports",
 						"students",
