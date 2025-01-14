@@ -68,6 +68,7 @@
 
 // Update with your config settings.
 const { knexSnakeCaseMappers } = require("objection");
+const config = require("./config");
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -76,9 +77,11 @@ module.exports = {
   development: {
     client: "postgresql",
     connection: {
-      database: "gain_solutions_project",
-      user: "postgres",
-      password: "postgres",
+      database: config.DATABASE_NAME,
+      user: config.DB_USER,
+      password: config.DB_PASSWORD,
+      host: config.DB_HOST,
+      // port: config.DB_PORT,
     },
     pool: {
       min: 2,

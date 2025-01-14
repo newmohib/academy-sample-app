@@ -27,4 +27,4 @@ const checkRole = (role) => {
 };
 
 
-module.exports = {authenticateJWT};
+module.exports = {authenticateJWT, checkRole};

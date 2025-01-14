@@ -12,6 +12,7 @@
 - migration database with run script
  - npm run migrate
  - npm run dev (development/local)
+ - npm run start (production)
 - roleback 
  - npm run migrate:roleback
 
