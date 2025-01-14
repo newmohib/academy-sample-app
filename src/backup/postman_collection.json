@@ -1,0 +1,1120 @@
+{
+	"info": {
+		"_postman_id": "52dea202-af1a-4e13-9aa2-b99040338b6f",
+		"name": "Gain Solutins System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10162430"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWQiOjEsImlhdCI6MTczNjAyMzU2NSwiZXhwIjoxNzM4NjE1NTY1fQ.z_RLNxi5whZKwgPsmmFhlf6xRvWC4A6z8rPr-FxfFRE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin+1@example.com\",\n    \"password\":\"123456\",\n    \"role\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiaWQiOjEsImlhdCI6MTczNjAyMzU2NSwiZXhwIjoxNzM4NjE1NTY1fQ.z_RLNxi5whZKwgPsmmFhlf6xRvWC4A6z8rPr-FxfFRE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@example.com\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Institute list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@example.com\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/institutes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"institutes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Institute Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Institute F\", \n    \"address\": \"123 Main St\",\n    \"contact\": \"123-456-7896\",\n    \"email\": \"contac7@instituteA.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/institutes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"institutes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Institute Update By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Institute AF\", \n    \"address\": \"123 Main St\",\n    \"contact\": \"123-456-7896\",\n    \"email\": \"contac17@instituteA.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/institutes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"institutes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Institute Delete By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3ODA0MSwiZXhwIjoxNzM2NzgxNjQxfQ.4tfwTKjqova0qej9hUSJ3_xIjF41d2hDke1yvn9CatM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Institute AF\", \n    \"address\": \"123 Main St\",\n    \"contact\": \"123-456-7896\",\n    \"email\": \"contac17@instituteA.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/institutes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"institutes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student List with Paginations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc2NzY5NCwiZXhwIjoxNzM2NzcxMjk0fQ.j3gxr7bHjcwsPIbA2_0-LL_iQqwu43GTHQabGZSUMuE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@example.com\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students?limit=2&direction=next&cursor=Mw==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "direction",
+							"value": "next"
+						},
+						{
+							"key": "cursor",
+							"value": "Mw=="
+						},
+						{
+							"key": "direction",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studen Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Mohib3\",\n    \"institute_id\": 4,\n    \"email\":\"mohib4@gmail.com\",\n    \"phone\":\"01722197626\",\n    \"dob\": \"2000-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studen Update By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Mohib31\",\n    \"institute_id\": 4,\n    \"email\":\"mohib12@gmail.com\",\n    \"phone\":\"01722197621\",\n    \"dob\": \"2000-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"1"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Delete By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Mohib31\",\n    \"institute_id\": 4,\n    \"email\":\"mohib12@gmail.com\",\n    \"phone\":\"01722197621\",\n    \"dob\": \"2000-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"1"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Course Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Introduction to Programming 6\",\n    \"description\": \"A beginner-level course to learn the basics of programming. 6\",\n    \"institute_id\": 1,\n    \"created_at\": \"2025-01-01T10:00:00Z\",\n    \"updated_at\": \"2025-01-01T10:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Course Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Introduction to Programming 6\",\n    \"description\": \"A beginner-level course to learn the basics of programming. 6\",\n    \"institute_id\": 1,\n    \"created_at\": \"2025-01-01T10:00:00Z\",\n    \"updated_at\": \"2025-01-01T10:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"courses",
+						"1"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Course List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Introduction to Programming\",\n    \"description\": \"A beginner-level course to learn the basics of programming.\",\n    \"institute_id\": 3,\n    \"created_at\": \"2025-01-01T10:00:00Z\",\n    \"updated_at\": \"2025-01-01T10:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Result Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"student_id\": 2,\n    \"course_id\": 4,\n    \"marks_obtained\": 55.5,\n    \"year\":\"2025\",\n    \"created_at\": \"2025-01-10T08:00:00Z\",\n    \"updated_at\": \"2025-01-10T08:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/results",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"results"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Result Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"student_id\": 2,\n    \"course_id\": 4,\n    \"marks_obtained\": 55.5,\n    \"created_at\": \"2025-01-10T08:00:00Z\",\n    \"updated_at\": \"2025-01-10T08:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/results/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"results",
+						"1"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Result List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"student_id\": 2,\n    \"course_id\": 4,\n    \"marks_obtained\": 55.5,\n    \"created_at\": \"2025-01-10T08:00:00Z\",\n    \"updated_at\": \"2025-01-10T08:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/results",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"results"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/results/institute/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"student_id\": 2,\n    \"course_id\": 4,\n    \"marks_obtained\": 55.5,\n    \"created_at\": \"2025-01-10T08:00:00Z\",\n    \"updated_at\": \"2025-01-10T08:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/results/institute/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"results",
+						"institute",
+						"1"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/courses/top",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"student_id\": 2,\n    \"course_id\": 4,\n    \"marks_obtained\": 55.5,\n    \"created_at\": \"2025-01-10T08:00:00Z\",\n    \"updated_at\": \"2025-01-10T08:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/courses/top?year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"courses",
+						"top"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/students/top",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNjc3MTYyMiwiZXhwIjoxNzM2Nzc1MjIyfQ.fzU8yEWRW26rHQNm6xLEhsY_vUi3yfTZCXhp4iC4c1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"student_id\": 2,\n    \"course_id\": 4,\n    \"marks_obtained\": 55.5,\n    \"created_at\": \"2025-01-10T08:00:00Z\",\n    \"updated_at\": \"2025-01-10T08:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/students/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"students",
+						"top"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "next",
+							"disabled": true
+						},
+						{
+							"key": "cursor",
+							"value": "Mw==",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
