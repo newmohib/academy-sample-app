@@ -81,7 +81,7 @@ module.exports = {
       user: config.DB_USER,
       password: config.DB_PASSWORD,
       host: config.DB_HOST,
-      // port: config.DB_PORT,
+      port: config.DB_PORT,
     },
     pool: {
       min: 2,
